@@ -12,13 +12,34 @@
 .badge-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:18px}.badge-card{border:1px solid var(--line);background:#ffffff04;border-radius:16px;padding:15px;min-width:0}.badge-card h3{margin:9px 0 2px}.badge-card p{font-size:13px;min-height:58px}.badge-icon{display:grid;place-items:center;width:43px;height:43px;border-radius:14px;font-size:24px;font-weight:900;background:#ffffff0b;border:1px solid var(--line)}.gold{color:#e2d16a}.violet{color:#c8a5f5}.blue{color:#8ac9f7}.price{font-size:12px;color:var(--muted);margin-top:12px}.badge-card .btn{font-size:13px;padding:9px 10px;min-height:38px;width:100%}@media(max-width:560px){.badge-grid{grid-template-columns:1fr}.badge-card{display:grid;grid-template-columns:48px 1fr;column-gap:10px}.badge-card .badge-icon{grid-row:span 2}.badge-card h3{margin:0}.badge-card p{min-height:0;margin:4px 0}.badge-card .price,.badge-card .btn{grid-column:2}.badge-card .btn{margin-top:10px}}</style>
 </head>
 <body><main class="wrap">
-<header class="top"><a class="logo" href="./" style="color:var(--text)">v<span>TOK</span></a><nav><a href="#updates">Обновления</a><a href="#history">История версий</a><a href="#docs">Документация</a><a href="#badge-shop">Бейджи</a><a href="https://github.com/ramzilzokirov-lgtm/Vtik" target="_blank" rel="noopener">GitHub ↗</a></nav></header>
+<header class="top"><a class="logo" href="./" style="color:var(--text)">v<span>TOK</span></a><nav><a href="#updates">Обновления</a><a href="#history">История версий</a><a href="#docs">Документация</a><a href="#plugins">Плагины</a><a href="#badge-shop">Бейджи</a><a href="https://github.com/ramzilzokirov-lgtm/Vtik" target="_blank" rel="noopener">GitHub ↗</a></nav></header>
 <section class="hero"><div class="eyebrow">Официальный центр обновлений</div><h1>vTOK обновления</h1><p>Здесь публикуются доступные версии приложения, APK-файлы и список изменений. Данные о релизах загружаются напрямую из GitHub.</p></section>
 <section id="updates" class="card"><div class="release-head"><div><div class="eyebrow">Последний релиз</div><div id="latest-version" class="version">Загрузка…</div><div id="latest-date" class="muted">Проверяем опубликованные версии</div></div><span id="latest-badge" class="pill">Проверка</span></div><div id="latest-notes" class="muted" style="margin-top:16px">Получаем информацию о последнем релизе…</div><div id="latest-assets" class="assets"></div><p class="small" id="latest-hint">Если релизов ещё нет, создай релиз и прикрепи APK в GitHub Releases.</p></section>
 <h2 class="section-title" id="history">История версий</h2><section class="card"><div id="release-list" class="status">Загружаем историю релизов…</div></section>
 <h2 class="section-title" id="docs">Документация</h2><section class="card"><h3>Что это за проект</h3><p class="muted">vTOK — проект Android-приложения. Сайт служит страницей публикации версий, документации и информации о бейджах.</p><h3>Установка APK</h3><ol><li>Скачай APK из опубликованного релиза.</li><li>Открой файл на Android и разреши установку из этого источника, если система попросит.</li><li>Если установка не подходит к устройству, проверь требования версии в описании релиза.</li></ol><h3>Документация для пользователей</h3><ul><li>Скачивай приложение только из официального релиза проекта.</li><li>Перед обновлением проверь список изменений и совместимость.</li><li>Если установка завершилась ошибкой, сообщи версию Android и номер релиза в разделе Issues.</li></ul><h3>Документация для владельца проекта</h3><p class="muted">Публикуй APK как вложение к GitHub Release. Не добавляй пароли, токены или личные данные в публичные файлы. Бейджи в этом каталоге пока демонстрационные; реальные продажи требуют настроенного платёжного провайдера, правил возврата и защищённого механизма выдачи.</p><h3>Как публикуются обновления</h3><p class="muted">В GitHub репозитории открой <b>Releases → Create a new release</b>, укажи тег версии, добавь описание изменений и прикрепи APK в разделе файлов релиза. После публикации сайт автоматически покажет версию и ссылку на APK.</p><a href="https://github.com/ramzilzokirov-lgtm/Vtik/releases" target="_blank" rel="noopener">Открыть все релизы GitHub ↗</a><p class="small">Сайт не создаёт APK и не объявляет обновление доступным, пока релиз не опубликован.</p></section>
 
-<h2 class="section-title" id="badge-shop">Магазин бейджей</h2>
+
+<h2 class="section-title" id="plugins">Документация по плагинам</h2>
+<section class="card">
+<p class="muted">Раздел описывает планируемую систему расширений vTOK. Совместимость плагинов пока не гарантируется: загружай только файлы, которым доверяешь.</p>
+<h3>Что может делать плагин</h3>
+<ul><li>Добавлять необязательные настройки интерфейса и темы.</li><li>Менять визуальные элементы только через разрешённые API приложения.</li><li>Подключать дополнительные функции, если соответствующий API будет реализован.</li></ul>
+<h3>Как подготовить плагин</h3>
+<ol><li>Проверь версию vTOK и версию API, для которой предназначено расширение.</li><li>Подготовь исходный код, описание функций, автора, лицензию и список разрешений.</li><li>Не запрашивай пароли, коды входа, токены или доступ к личным сообщениям без реальной необходимости.</li><li>Проверь расширение на тестовом устройстве и опиши известные ограничения.</li><li>Публикуй исходники и инструкции в отдельном репозитории GitHub; укажи контрольную сумму релизного файла.</li></ol>
+<h3>Безопасность и совместимость</h3>
+<p class="muted">Не устанавливай неизвестные APK или библиотеки. Не отключай защиту Android ради плагина. Подпись, формат пакета, разрешения, API и механизм установки плагинов ещё должны быть реализованы в приложении; этот сайт сам по себе не устанавливает и не запускает плагины.</p>
+<h3>Структура документации расширения</h3>
+<pre><code>Название:
+Автор:
+Версия плагина:
+Совместимость с vTOK:
+Версия API:
+Описание:
+Разрешения:
+Известные ограничения:
+Исходный код и релиз:</code></pre>
+</section>
+\n<h2 class="section-title" id="badge-shop">Магазин бейджей</h2>
 <section class="card">
 <p class="muted">Выбери оформление бейджа. Сейчас это каталог и заявки: автоматическая оплата и выдача бейджей ещё не подключены. Не отправляй данные банковской карты через GitHub.</p>
 <div class="badge-grid">
